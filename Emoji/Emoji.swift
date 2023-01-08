@@ -12,5 +12,6 @@ struct Emoji {
     var name: String
     var description: String
     var usage: String
-}
+} mklfmlşdkblşgflbfb
+
 
