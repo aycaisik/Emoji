@@ -65,7 +65,7 @@ class EmojiTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         // 1 section varsa bu fonksiyonu yazmak zorunda değilsiniz.
         // Çünkü: Varsayılan section sayısı zaten 1'dir.
-        return 0
+        return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -73,7 +73,7 @@ class EmojiTableViewController: UITableViewController {
         // Her section için 1 kez çalışıyor. Örneğin, 4 section'a sahip bir tableView varsa,
         // Bu fonksiyon her section için 1kez olmak üzere toplam 4 kez çalışacaktır.
         // Section parametresi o an çizilmekte olan section bilgisini verir.
-        return 10
+        return emojis.count //Elimizdeki emoji sayısı kadar hücre olması..
     }
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
