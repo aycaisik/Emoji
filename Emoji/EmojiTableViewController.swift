@@ -11,6 +11,7 @@ class EmojiTableViewController: UITableViewController {
     
     
     // MARK: - Properties
+    
       var emojis: [Emoji] = [
           Emoji(symbol: "😀", name: "Grinning Face",
                 description: "A typical smiley face.", usage: "happiness"),
@@ -55,20 +56,46 @@ class EmojiTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        
+    
     }
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
+        // 1 section varsa bu fonksiyonu yazmak zorunda değilsiniz.
+        // Çünkü: Varsayılan section sayısı zaten 1'dir.
         return 0
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 0
+        // Her section için 1 kez çalışıyor. Örneğin, 4 section'a sahip bir tableView varsa,
+        // Bu fonksiyon her section için 1kez olmak üzere toplam 4 kez çalışacaktır.
+        // Section parametresi o an çizilmekte olan section bilgisini verir.
+        return 10
+    }
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        // Bir hücre, ne zamanki ekrana gelecek; cellForRow ile çizilir.
+        // Bu fonksiyonun kaç kez çalışacağı belli değildir.
+            // Örnek 1: Kullanıcı hiç scrool etmez ise, ekranda görünebilir olan hücre sayısı kadar çalışır.
+            // Örnek 2: Kullanıcı scroll etmeye başlarsa scroll ettiği sürece bu fonksiyon çalışır.
+             
+        //IndexPath: O an çizilmekte olan hücrenin konum bilgisi
+        //Adım 1 : O an çizilmekte olan emoji nesnesine indexPath değeri ile ulaşmak
+        let emoji = emojis[indexPath.row]
+        
+        //Adım 2 : Hücre oluşturmak.
+        //ReuseIdentifier: Storyboard'da hücre için verdiğiniz identifier değeri.
+        let cell = tableView.dequeueReusableCell(withIdentifier: "EmojiCell")!
+        
+        //Adım 3: Hücreyi data ile doldurmak.
+        cell.textLabel?.text = "\(emoji.symbol)- \(emoji.name)" //Title
+        cell.detailTextLabel?.text = "\(emoji.description)" //Subtitle
+        
+        return cell
+        
     }
 
     /*
