@@ -49,7 +49,10 @@ class EmojiTableViewController: UITableViewController {
                 usage: "tired, sleepiness"),
           Emoji(symbol: "🏁", name: "Checkered Flag",
                 description: "A black-and-white checkered flag.",
-                usage: "completion")
+                usage: "completion") ,
+          Emoji(symbol: "🐝", name: "Wız Wız Bee",
+                description: "A cute bee.",
+                usage: "send valentine")
       ]
       
       // MARK: - Life Cycle
@@ -112,12 +115,28 @@ class EmojiTableViewController: UITableViewController {
     
     //MARK: - Actions
     
+    //move row at yazdık çıktı.
+    override func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        //sourceIndexPath: sırası değiştirilmek istenen hücrenin konumu.
+        //destinationIndexPath: gidilmesi istenen konum.(Parmak ekran kaldırılınca)
+        
+        //COK ONEMLI: "emojis" arrayin tableview hücre sırasıyla aynı kalması gerekir.
+        //Bu senkronu sağlayabilmek için hareket ettirilen objenin, arrayde de konumu değiştirilir.
+        //Adım 1: Hareket ettirilen emoji nesnesine ulaşmak ve arrayden silmek.
+        let movedEmoji = emojis.remove(at: sourceIndexPath.row)
+        //Adım 2: Silinen elemanı arrayde yeni yerine ekleriz.
+        emojis.insert(movedEmoji, at: destinationIndexPath.row)
+        //Adım 3: TableView güncellenen array sırası ile tüm elemanlarını yeniden çizicek.
+        tableView.reloadData() 
+        
+    }
+    
     @IBAction func editButtonTapped(_ button:UIBarButtonItem){
         
         //isEditing o an TableViewin edit modda olup olmadığı bilgisini verir.
         let tableViewEditing = tableView.isEditing
         //TableViewin editing moda girmesini ve çıkmasını sağlar.
-        tableView.setEditing(tableViewEditing, animated: true)
+        tableView.setEditing(!tableViewEditing, animated: true)
     }
 
     /*
