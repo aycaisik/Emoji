@@ -39,7 +39,13 @@
                             <outlet property="delegate" destination="xNm-HK-7qW" id="2kb-aP-7KR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="Emoji Table" id="rtk-tR-Z4c"/>
+                    <navigationItem key="navigationItem" title="Emoji Table" id="rtk-tR-Z4c">
+                        <barButtonItem key="rightBarButtonItem" title="Edit" id="KbQ-bq-mXt">
+                            <connections>
+                                <action selector="editButtonTapped:" destination="xNm-HK-7qW" id="n2S-It-Gax"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T0B-Mx-DW3" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

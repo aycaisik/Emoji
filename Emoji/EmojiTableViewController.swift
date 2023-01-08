@@ -97,6 +97,28 @@ class EmojiTableViewController: UITableViewController {
         return cell
         
     }
+    
+    //MARK: - Table View Delegete
+    //Zorunlu değil bu fonksiyonları yazmak.
+    //Hücreye tıklandı bilgisi.
+    //didselectrow yazsan yetiyor.
+    override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        //Bu fonksiyon, kullanıcı hücrenizi seçtiği zaman(üstüne tıkladığı zaman)çalışır.
+        //indexPath'in row propertysini kullanarak üstüne tıklanılan emojiye ulaşılır.
+        let selectedEmoji = emojis[indexPath.row]
+        print("\(selectedEmoji.symbol)\(indexPath)")
+        
+    }
+    
+    //MARK: - Actions
+    
+    @IBAction func editButtonTapped(_ button:UIBarButtonItem){
+        
+        //isEditing o an TableViewin edit modda olup olmadığı bilgisini verir.
+        let tableViewEditing = tableView.isEditing
+        //TableViewin editing moda girmesini ve çıkmasını sağlar.
+        tableView.setEditing(tableViewEditing, animated: true)
+    }
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
