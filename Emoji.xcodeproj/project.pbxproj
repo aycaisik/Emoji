@@ -9,21 +9,23 @@
 /* Begin PBXBuildFile section */
 		FDB43887296AF632004039F9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB43886296AF632004039F9 /* AppDelegate.swift */; };
 		FDB43889296AF632004039F9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB43888296AF632004039F9 /* SceneDelegate.swift */; };
-		FDB4388B296AF632004039F9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4388A296AF632004039F9 /* ViewController.swift */; };
 		FDB4388E296AF632004039F9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB4388C296AF632004039F9 /* Main.storyboard */; };
 		FDB43890296AF634004039F9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = FDB4388F296AF634004039F9 /* Assets.xcassets */; };
 		FDB43893296AF634004039F9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = FDB43891296AF634004039F9 /* LaunchScreen.storyboard */; };
+		FDB4389B296AF720004039F9 /* EmojiTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4389A296AF720004039F9 /* EmojiTableViewController.swift */; };
+		FDB4389D296AF747004039F9 /* Emoji.swift in Sources */ = {isa = PBXBuildFile; fileRef = FDB4389C296AF747004039F9 /* Emoji.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		FDB43883296AF632004039F9 /* Emoji.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Emoji.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		FDB43886296AF632004039F9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		FDB43888296AF632004039F9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		FDB4388A296AF632004039F9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		FDB4388D296AF632004039F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		FDB4388F296AF634004039F9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		FDB43892296AF634004039F9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		FDB43894296AF634004039F9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		FDB4389A296AF720004039F9 /* EmojiTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmojiTableViewController.swift; sourceTree = "<group>"; };
+		FDB4389C296AF747004039F9 /* Emoji.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Emoji.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,7 +60,8 @@
 			children = (
 				FDB43886296AF632004039F9 /* AppDelegate.swift */,
 				FDB43888296AF632004039F9 /* SceneDelegate.swift */,
-				FDB4388A296AF632004039F9 /* ViewController.swift */,
+				FDB4389C296AF747004039F9 /* Emoji.swift */,
+				FDB4389A296AF720004039F9 /* EmojiTableViewController.swift */,
 				FDB4388C296AF632004039F9 /* Main.storyboard */,
 				FDB4388F296AF634004039F9 /* Assets.xcassets */,
 				FDB43891296AF634004039F9 /* LaunchScreen.storyboard */,
@@ -138,8 +141,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				FDB4388B296AF632004039F9 /* ViewController.swift in Sources */,
+				FDB4389B296AF720004039F9 /* EmojiTableViewController.swift in Sources */,
 				FDB43887296AF632004039F9 /* AppDelegate.swift in Sources */,
+				FDB4389D296AF747004039F9 /* Emoji.swift in Sources */,
 				FDB43889296AF632004039F9 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
